@@ -1,7 +1,7 @@
 # Short Clip Cutter
 
 Turns a long-form video (YouTube URL or local file) into ranked 9:16 vertical
-short clips with burned-in captions, suitable for Reels / Shorts / TikTok.
+short clips, suitable for Reels / Shorts / TikTok.
 
 This repository is the **client / control plane**. It runs a thin Python CLI that
 orchestrates the pipeline but performs no ML itself. All heavy work (transcription,
