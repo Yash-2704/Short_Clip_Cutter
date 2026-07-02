@@ -1,0 +1,32 @@
+# --- Secrets / local config ---
+.env                      # real server URL + any token; .env.example stays tracked
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Pipeline artifacts (regenerated per run; never commit) ---
+work/                     # per-job-id stage cache (locate/audio/transcribe/rank/render)
+output/                   # rendered clip mp4s + per-clip transcripts
+logs/                     # per-run log files
+*.zip                     # render zips, handoff bundles
+*.mp4
+*.opus
+*.part                    # in-flight temp files (audio extract, streamed downloads)
+
+# --- GPU-side handoff (separate project; not part of the Mac orchestrator) ---
+clip-server-handoff/
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
